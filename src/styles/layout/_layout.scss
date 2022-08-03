@@ -1,0 +1,89 @@
+html {
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+body {
+    width: auto;
+    height: 990px;
+    background: #f3f5fa;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4e36fc;
+    width: 158px;
+    height: 30px;
+    top: 54px;
+    left: 42px;
+    position: relative;
+}
+
+.brand img {
+    position: relative;
+    margin: 0 22px 0 0;
+}
+
+.sidebar {
+    position: absolute;
+    width: 281px;
+    height: 1000px;
+    left: 0px;
+    top: 0px;
+    background: #ffffff;
+}
+
+.sidebarContent {
+    position: absolute;
+    width: 151.6px;
+    height: 328.08px;
+    left: 36px;
+    top: 167px;
+    padding: 0;
+    margin-top: 0;
+}
+
+.sidebarContent li {
+     margin-bottom: 39.62px;
+     margin-top: 0;
+     
+}
+
+.sidebarContent li a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #8a8b9f; 
+    display: flex;
+    align-items: center;
+}
+
+.sidebarContent .activeList{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #4e36fc;
+}
+
+.icon {
+    margin-right: 21.38px;
+}
+
+.list{
+    white-space: nowrap;
+}
