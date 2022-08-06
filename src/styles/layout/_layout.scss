@@ -11,6 +11,8 @@ body {
     background: #f3f5fa;
 }
 
+// sidebar
+
 .logo {
     width: 30px;
     height: 30px;
@@ -31,11 +33,10 @@ body {
     top: 54px;
     left: 42px;
     position: relative;
-}
-
-.brand img {
-    position: relative;
-    margin: 0 22px 0 0;
+    img {
+        position: relative;
+        margin: 0 22px 0 0;
+    }
 }
 
 .sidebar {
@@ -45,6 +46,8 @@ body {
     left: 0px;
     top: 0px;
     background: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebarContent {
@@ -55,35 +58,74 @@ body {
     top: 167px;
     padding: 0;
     margin-top: 0;
-}
-
-.sidebarContent li {
-     margin-bottom: 39.62px;
-     margin-top: 0;
-     
-}
-
-.sidebarContent li a {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #8a8b9f; 
-    display: flex;
-    align-items: center;
-}
-
-.sidebarContent .activeList{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    color: #4e36fc;
+    .activeList {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #4e36fc;
+    }
+    li {
+        margin-bottom: 39.62px;
+        margin-top: 0;
+    }
+    a {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #8a8b9f;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .icon {
     margin-right: 21.38px;
 }
 
-.list{
+.list {
     white-space: nowrap;
+}
+
+.activeDevice {
+    position: absolute;
+    width: 209.19px;
+    height: 202.3px;
+    left: 32px;
+    top: 625px;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+}
+
+.iphoneContent {
+    display: flex;
+    justify-content: space-between;
+    width: 209.19px;
+    height: 64px;
+    height: auto;
+    padding: 0;
+    align-items: center;
+}
+
+.iphoneStatus {
+    display: flex;
+    flex-direction: column;
+    margin-right: 21.92px;
+    .iphoneName {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #5d4e7b;
+        margin-bottom: 8.01px;
+        width: 89px;
+    }
+    .IphoneStatusColor {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #5d4e7b;
+    }
 }

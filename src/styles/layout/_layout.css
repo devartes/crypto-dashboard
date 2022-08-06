@@ -45,6 +45,8 @@ body {
   left: 0px;
   top: 0px;
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebarContent {
@@ -57,12 +59,19 @@ body {
   margin-top: 0;
 }
 
+.sidebarContent .activeList {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #4e36fc;
+}
+
 .sidebarContent li {
   margin-bottom: 39.62px;
   margin-top: 0;
 }
 
-.sidebarContent li a {
+.sidebarContent a {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -72,17 +81,55 @@ body {
   align-items: center;
 }
 
-.sidebarContent .activeList {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  color: #4e36fc;
-}
-
 .icon {
   margin-right: 21.38px;
 }
 
 .list {
   white-space: nowrap;
+}
+
+.activeDevice {
+  position: absolute;
+  width: 209.19px;
+  height: 202.3px;
+  left: 32px;
+  top: 625px;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+
+.iphoneContent {
+  display: flex;
+  justify-content: space-between;
+  width: 209.19px;
+  height: 64px;
+  height: auto;
+  padding: 0;
+  align-items: center;
+}
+
+.iphoneStatus {
+  display: flex;
+  flex-direction: column;
+  margin-right: 21.92px;
+}
+
+.iphoneStatus .iphoneName {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5d4e7b;
+  margin-bottom: 8.01px;
+  width: 89px;
+}
+
+.iphoneStatus .IphoneStatusColor {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5d4e7b;
 }

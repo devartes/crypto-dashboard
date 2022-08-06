@@ -11,19 +11,36 @@ function Sidebar() {
     ];
 
     const listItems = Items.map((item) =>
-        <li className="list" key={item.id}><a href="#"><img className="icon" src={item.url}/>{item.title}</a></li>
+        <li className="list" key={item.id}><a href="#"><img className="icon" src={item.url} />{item.title}</a></li>
     );
 
     return (
         <div className="sidebar">
-            <a href="#" className="brand"><img src={Logo} alt="imagem da logo" />Mine&Shine</a>
-            <ul className="sidebarContent">
-                <li className="list"><a href="#" className="activeList"><img src="https://i.ibb.co/1rsMD2g/home.png" className="icon"/>Dashboard</a></li>
-                {listItems}
-            </ul>
-            <ul className="activeDevice">
+            <div>
+                <a href="#" className="brand"><img src={Logo} alt="imagem da logo" />Mine&Shine</a>
+                <ul className="sidebarContent">
+                    <li className="list"><a href="#" className="activeList"><img src="https://i.ibb.co/1rsMD2g/home.png" className="icon" />Dashboard</a></li>
+                    {listItems}
+                </ul>
+            </div>
 
-            </ul>
+            <div className="activeDevice">
+                <span>Active device</span>
+                <div className="iphone">
+                    <ul className="iphoneContent">
+                        <li>
+                            <img src="https://i.ibb.co/0YT6kft/iphone.png" />
+                        </li>
+                        <li className="iphoneStatus">
+                            <span className="iphoneName">Iphone 6s Plus</span>
+                            <span className="IphoneStatusColor">Active</span>
+                        </li>
+                        <li>
+                            <img src="https://i.ibb.co/QYdz0D9/dots.png" alt="dots" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
