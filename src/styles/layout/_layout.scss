@@ -109,11 +109,13 @@ body {
     margin-top: 26.79px;
 }
 
-.IphoneStatus,.MacStatus {
+.IphoneStatus,
+.MacStatus {
     display: flex;
     flex-direction: column;
     margin-right: 21.92px;
-    .IphoneName,.MacName {
+    .IphoneName,
+    .MacName {
         font-style: normal;
         font-weight: 500;
         font-size: 12px;
@@ -122,7 +124,8 @@ body {
         margin-bottom: 8.01px;
         width: 89px;
     }
-    .IphoneStatusColor,.MacStatusColor {
+    .IphoneStatusColor,
+    .MacStatusColor {
         display: flex;
         align-items: center;
         font-style: normal;
@@ -130,12 +133,13 @@ body {
         font-size: 12px;
         line-height: 14px;
         color: #5d4e7b;
-    } #IconStatus {
+    }
+    #IconStatus {
         position: relative;
         width: 6.5px;
         height: 6.5px;
         margin-right: 7.78px;
-        background: #3ECD7B;
+        background: #3ecd7b;
         border-radius: 36px;
     }
 }
@@ -156,5 +160,56 @@ body {
     left: 14px;
 }
 
-// nav
+// Content Dasboard
 
+.DashboardContent {
+    position: absolute;
+    left: 353px;
+    top: 52px;
+    bottom: 44px;
+}
+
+// Nav
+
+.Navbar {
+    .Title {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: #151630;
+        margin-bottom: 25px;
+    }
+}
+
+.CryptoList {
+    display: flex;
+    padding: 0;
+    margin: 7px 0;
+    li {
+        margin-right: 27px;
+        width: 34px;
+        height: 34px;
+
+        .CryptoIconClick {
+            width: 46px;
+            height: 46px;
+            border: 2px solid #ffffff;
+            border-radius: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        :active,:focus {
+            position: relative;
+            border: 2px solid #4f46ba;
+            z-index: 1;
+            outline: none;
+        }
+        .CryptoImage {
+            border: none;
+        }
+    }
+}
