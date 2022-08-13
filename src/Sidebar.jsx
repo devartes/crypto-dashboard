@@ -11,34 +11,51 @@ function Sidebar() {
     ];
 
     const listItems = Items.map((item) =>
-        <li className="list" key={item.id}><a href="#"><img className="icon" src={item.url} />{item.title}</a></li>
+        <li className="List" key={item.id}><a href="#"><img className="Icon" src={item.url} />{item.title}</a></li>
     );
 
     return (
-        <div className="sidebar">
+        <div className="Sidebar">
             <div>
-                <a href="#" className="brand"><img src={Logo} alt="imagem da logo" />Mine&Shine</a>
-                <ul className="sidebarContent">
-                    <li className="list"><a href="#" className="activeList"><img src="https://i.ibb.co/1rsMD2g/home.png" className="icon" />Dashboard</a></li>
+                <a href="#" className="Brand"><img src={Logo} alt="imagem da logo" />Mine&Shine</a>
+                <ul className="SidebarContent">
+                    <li className="List"><a href="#" className="ActiveList"><img src="https://i.ibb.co/1rsMD2g/home.png" className="Icon" />Dashboard</a></li>
                     {listItems}
                 </ul>
             </div>
 
-            <div className="activeDevice">
+            <div className="ActiveDevice">
                 <span>Active device</span>
-                <div className="iphone">
-                    <ul className="iphoneContent">
+                <div className="Mac">
+                    <ul className="IphoneContent">
                         <li>
                             <img src="https://i.ibb.co/0YT6kft/iphone.png" />
                         </li>
-                        <li className="iphoneStatus">
-                            <span className="iphoneName">Iphone 6s Plus</span>
-                            <span className="IphoneStatusColor">Active</span>
+                        <li className="IphoneStatus">
+                            <span className="IphoneName">Iphone 6s Plus</span>
+                            <div className="IphoneStatusColor">
+                                <span id="IconStatus"></span>Active
+                            </div>
                         </li>
                         <li>
                             <img src="https://i.ibb.co/QYdz0D9/dots.png" alt="dots" />
                         </li>
                     </ul>
+                    <ul className="MacContent">
+                        <li>
+                            <img src="https://i.ibb.co/0F2FrBN/macbook.png" />
+                        </li>
+                        <li className="MacStatus">
+                            <span className="MacName">Macbook 2017</span>
+                            <div className="MacStatusColor">
+                                <span id="IconStatus"></span>Active
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://i.ibb.co/QYdz0D9/dots.png" alt="dots" />
+                        </li>
+                    </ul>
+                    <div id="User"><img src="https://i.ibb.co/mhmKPk4/user.png"/></div>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ body {
     z-index: 1;
 }
 
-.brand {
+.Brand {
     display: flex;
     align-items: center;
     font-style: normal;
@@ -39,7 +39,7 @@ body {
     }
 }
 
-.sidebar {
+.Sidebar {
     position: absolute;
     width: 281px;
     height: 1000px;
@@ -50,7 +50,7 @@ body {
     flex-direction: column;
 }
 
-.sidebarContent {
+.SidebarContent {
     position: absolute;
     width: 151.6px;
     height: 328.08px;
@@ -58,7 +58,7 @@ body {
     top: 167px;
     padding: 0;
     margin-top: 0;
-    .activeList {
+    .ActiveList {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -79,16 +79,16 @@ body {
     }
 }
 
-.icon {
+.Icon {
     margin-right: 21.38px;
 }
 
-.list {
+.List {
     white-space: nowrap;
 }
 
-.activeDevice {
-    position: absolute;
+.ActiveDevice {
+    position: relative;
     width: 209.19px;
     height: 202.3px;
     left: 32px;
@@ -98,21 +98,22 @@ body {
     bottom: 0;
 }
 
-.iphoneContent {
+.IphoneContent {
     display: flex;
     justify-content: space-between;
     width: 209.19px;
     height: 64px;
-    height: auto;
     padding: 0;
     align-items: center;
+    margin-bottom: 28.51px;
+    margin-top: 26.79px;
 }
 
-.iphoneStatus {
+.IphoneStatus,.MacStatus {
     display: flex;
     flex-direction: column;
     margin-right: 21.92px;
-    .iphoneName {
+    .IphoneName,.MacName {
         font-style: normal;
         font-weight: 500;
         font-size: 12px;
@@ -121,11 +122,39 @@ body {
         margin-bottom: 8.01px;
         width: 89px;
     }
-    .IphoneStatusColor {
+    .IphoneStatusColor,.MacStatusColor {
+        display: flex;
+        align-items: center;
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
         color: #5d4e7b;
+    } #IconStatus {
+        position: relative;
+        width: 6.5px;
+        height: 6.5px;
+        margin-right: 7.78px;
+        background: #3ECD7B;
+        border-radius: 36px;
     }
 }
+
+.MacContent {
+    display: flex;
+    justify-content: space-between;
+    width: 209.19px;
+    height: 64px;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 72.7px;
+    margin-top: 26.79px;
+}
+
+#User {
+    position: relative;
+    left: 14px;
+}
+
+// nav
+

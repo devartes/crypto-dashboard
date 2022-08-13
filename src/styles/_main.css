@@ -1,5 +1,167 @@
-h1 {
-  color: pink;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;500&display=swap");
+html {
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+}
+
+body {
+  width: auto;
+  height: 990px;
+  background: #f3f5fa;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 1;
+}
+
+.Brand {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4e36fc;
+  width: 158px;
+  height: 30px;
+  top: 54px;
+  left: 42px;
+  position: relative;
+}
+
+.Brand img {
+  position: relative;
+  margin: 0 22px 0 0;
+}
+
+.Sidebar {
+  position: absolute;
+  width: 281px;
+  height: 1000px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.SidebarContent {
+  position: absolute;
+  width: 151.6px;
+  height: 328.08px;
+  left: 36px;
+  top: 167px;
+  padding: 0;
+  margin-top: 0;
+}
+
+.SidebarContent .ActiveList {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #4e36fc;
+}
+
+.SidebarContent li {
+  margin-bottom: 39.62px;
+  margin-top: 0;
+}
+
+.SidebarContent a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #8a8b9f;
+  display: flex;
+  align-items: center;
+}
+
+.Icon {
+  margin-right: 21.38px;
+}
+
+.List {
+  white-space: nowrap;
+}
+
+.ActiveDevice {
+  position: relative;
+  width: 209.19px;
+  height: 202.3px;
+  left: 32px;
+  top: 625px;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+
+.IphoneContent {
+  display: flex;
+  justify-content: space-between;
+  width: 209.19px;
+  height: 64px;
+  padding: 0;
+  align-items: center;
+  margin-bottom: 28.51px;
+  margin-top: 26.79px;
+}
+
+.IphoneStatus, .MacStatus {
+  display: flex;
+  flex-direction: column;
+  margin-right: 21.92px;
+}
+
+.IphoneStatus .IphoneName, .IphoneStatus .MacName, .MacStatus .IphoneName, .MacStatus .MacName {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5d4e7b;
+  margin-bottom: 8.01px;
+  width: 89px;
+}
+
+.IphoneStatus .IphoneStatusColor, .IphoneStatus .MacStatusColor, .MacStatus .IphoneStatusColor, .MacStatus .MacStatusColor {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5d4e7b;
+}
+
+.IphoneStatus #IconStatus, .MacStatus #IconStatus {
+  position: relative;
+  width: 6.5px;
+  height: 6.5px;
+  margin-right: 7.78px;
+  background: #3ECD7B;
+  border-radius: 36px;
+}
+
+.MacContent {
+  display: flex;
+  justify-content: space-between;
+  width: 209.19px;
+  height: 64px;
+  padding: 0;
+  align-items: center;
+  margin-bottom: 72.7px;
+  margin-top: 26.79px;
+}
+
+#User {
+  position: relative;
+  left: 14px;
 }
 
 article,
@@ -27,7 +189,8 @@ audio:not([controls]) {
   height: 0;
 }
 
-[hidden], template {
+[hidden],
+template {
   display: none;
 }
 
@@ -125,11 +288,11 @@ pre {
 }
 
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "“" "”" "‘" "’";
 }
 
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -187,7 +350,8 @@ textarea {
   vertical-align: baseline;
 }
 
-button, input {
+button,
+input {
   line-height: normal;
 }
 
@@ -209,7 +373,8 @@ input[disabled] {
   cursor: default;
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -238,4 +403,20 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+* {
+  font-family: "Tomorrow", sans-serif;
 }
