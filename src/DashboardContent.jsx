@@ -23,13 +23,45 @@ function DashboardContent() {
         <div>
             <div className="DashboardContent">
                 <nav className="Navbar">
-                    <h1 className="Title">Welcome to Dashboard</h1>
-                    <div className="CryptoTabs">
-                        <ul className="CryptoList">
-                        {CryptoIconslist}
-                        </ul>
+                    <div className="Welcome">
+                        <h1 className="Title">Welcome to Dashboard</h1>
+                        <div className="CryptoTabs">
+                            <ul className="CryptoList">
+                                {CryptoIconslist}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="SearchContainer">
+                        <span>Search</span>
+                        <form action=" " method="post">
+                            <input type="search" id="search" placeholder="Enter Search Term"/>
+                            <button type="submit" className="ButtonSearch"><img src="https://i.ibb.co/xLzk2qy/search.png" /></button>
+                        </form>
                     </div>
                 </nav>
+                <div className="Overview">
+                    <span>Overview</span>
+                    <div className="OverviewContainer">
+                        <div className="CoinContainer">
+                            <div className="WalletContainer">
+                                <div className="Coin">
+                                    <div className="CoinInformation">
+                                        oi1
+                                    </div>
+                                    <img src="https://i.ibb.co/YRn85xH/bitcoin-logo.png"></img>
+                                </div>
+                                <div className="WalletType">
+                                    <div className="WalletPrimary">oi</div>
+                                    <div className="WalletSecundary">oi</div>
+                                </div>
+                            </div>
+                            <div className="CryptoComparison">
+                                oi
+                            </div>
+                        </div>
+                        <div className="CompaniesList">oi2</div>
+                    </div>
+                </div>
             </div>
         </div>
     )

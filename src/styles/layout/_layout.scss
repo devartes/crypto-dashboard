@@ -163,15 +163,25 @@ body {
 // Content Dasboard
 
 .DashboardContent {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     left: 353px;
     top: 52px;
     bottom: 44px;
+    width: calc(100% - 420px);
 }
 
 // Nav
 
 .Navbar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Welcome {
+    width: 50%;
     .Title {
         font-weight: 500;
         font-size: 21px;
@@ -180,36 +190,149 @@ body {
         color: #151630;
         margin-bottom: 25px;
     }
+    .CryptoList {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-right: 20px;
+            width: 48px;
+            height: 48px;
+            .CryptoIconClick {
+                width: 46px;
+                height: 46px;
+                border: 2px solid #ffffff;
+                border-radius: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+            }
+            :active,
+            :focus {
+                position: relative;
+                border: 2px solid #4f46ba;
+                z-index: 1;
+                outline: none;
+            }
+            .CryptoImage {
+                border: none;
+            }
+        }
+    }
 }
 
-.CryptoList {
-    display: flex;
-    padding: 0;
-    margin: 7px 0;
-    li {
-        margin-right: 27px;
-        width: 34px;
-        height: 34px;
-
-        .CryptoIconClick {
-            width: 46px;
-            height: 46px;
-            border: 2px solid #ffffff;
-            border-radius: 13px;
+.SearchContainer {
+    width: 50%;
+    span {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: #151630;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 24px;
+    }
+    input {
+        width: 257px;
+        height: 48px;
+        top: 0;
+        background: #ffffff;
+        padding: 0;
+        border: none;
+        position: relative;
+        text-indent: 15px;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            position: relative;
-            z-index: 1;
+            color: #1e253a;
+            opacity: 0.2;
         }
-        :active,:focus {
-            position: relative;
-            border: 2px solid #4f46ba;
-            z-index: 1;
-            outline: none;
+    }
+    button {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        left: 20px;
+        top: 0;
+        background: #4f46ba;
+        border: none;
+        padding: 0;
+    }
+}
+
+// overview
+
+.Overview {
+    width: 100%;
+    height: 498px;
+    top: 142px;
+    position: absolute;
+    span {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #0d1118;
+    }
+    .OverviewContainer {
+        top: 26.85px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .CoinContainer {
+            width: 50%;
+            height: 447.25px;
+            background-color: red;
+            display: flex;
+            .WalletContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                background-color: yellow;
+                width: 405.66px;
+                .Coin {
+                    width: 405.66px;
+                    height: 269.74px;
+                    background: #4f46ba;
+                    top: 0;
+                    position: absolute;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .WalletType {
+                    display: flex;
+                    justify-content: space-between;
+                    .WalletPrimary {
+                        background-color: gray;
+                        width: 193.68px;
+                        height: 157.19px;
+                    }
+                    .WalletSecundary {
+                        background-color: green;
+                        width: 192.69px;
+                        height: 157.19px;
+                    }
+                }
+            }
+            .CryptoComparison{
+                width: 202px;
+                height: 448px;
+                background-color: white;
+                margin-left: 40.35px;
+            }
         }
-        .CryptoImage {
-            border: none;
+        .CompaniesList {
+            width: 50%;
+            background-color: blue;
         }
     }
 }
