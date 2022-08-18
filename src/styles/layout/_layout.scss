@@ -9,6 +9,7 @@ body {
     width: auto;
     height: 990px;
     background: #f3f5fa;
+    overflow-x: hidden;
 }
 
 // sidebar
@@ -42,9 +43,10 @@ body {
 .Sidebar {
     position: absolute;
     width: 281px;
-    height: 1000px;
+    height: 990px;
     left: 0px;
     top: 0px;
+    bottom: 0;
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -170,6 +172,10 @@ body {
     top: 52px;
     bottom: 44px;
     width: calc(100% - 420px);
+    max-width: 100%;
+    height: auto;
+    // min-height: 990px;
+    background-color: pink;
 }
 
 // Nav
@@ -178,10 +184,15 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
+    width: auto;
+    min-width: 1014px;
+    height: 99px;
 }
 
 .Welcome {
-    width: 50%;
+    // width: 50%;
+    min-width: 592px;
+    height: 98px;
     .Title {
         font-weight: 500;
         font-size: 21px;
@@ -224,7 +235,9 @@ body {
 }
 
 .SearchContainer {
-    width: 50%;
+    // width: 50%;
+    min-width: 325px;
+    background-color: goldenrod;
     span {
         font-weight: 500;
         font-size: 21px;
@@ -272,7 +285,10 @@ body {
 // overview
 
 .Overview {
+    // width: 100%;
+    background-color: blueviolet;
     width: 100%;
+    min-width: 1011px;
     height: 498px;
     top: 142px;
     position: absolute;
@@ -288,15 +304,13 @@ body {
         justify-content: space-between;
         position: relative;
         .CoinContainer {
-            width: 50%;
-            height: 447.25px;
-            background-color: red;
+            width: 648.01px;
+            height: 448px;
             display: flex;
             .WalletContainer {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                background-color: yellow;
                 width: 405.66px;
                 .Coin {
                     width: 405.66px;
@@ -305,33 +319,217 @@ body {
                     top: 0;
                     position: absolute;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     align-items: center;
+                    .CoinInformation {
+                        width: 158.21px;
+                        height: 190.14px;
+                        margin-left: 41.95px;
+                        .BalanceInUSD {
+                            display: flex;
+                            flex-direction: column;
+                            .TitleBalance {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 14px;
+                                color: #ffffff;
+                                margin-bottom: 9.09px;
+                            }
+                            #BalanceData {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 30px;
+                                line-height: 36px;
+                                color: #ffffff;
+                            }
+                        }
+                        .BalanceInformation {
+                            .TransactionsContainer {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 32.96px;
+                                .Transactions {
+                                    display: flex;
+                                    flex-direction: column;
+                                    .TransactionTitle {
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                        color: #ffffff;
+                                        margin-bottom: 12.58px;
+                                    }
+                                    #TransactionDetails {
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 22px;
+                                        line-height: 26px;
+                                        color: #ffffff;
+                                    }
+                                }
+                                .Wallets {
+                                    display: flex;
+                                    flex-direction: column;
+                                    .WalletsTitle {
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                        color: #ffffff;
+                                        margin-bottom: 12.58px;
+                                    }
+                                    #WalletsDetails {
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 22px;
+                                        line-height: 26px;
+                                        color: #ffffff;
+                                    }
+                                }
+                            }
+                            #LastActivity {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 14px;
+                                color: #ffffff;
+                                margin-top: 31.51px;
+                            }
+                        }
+                    }
                 }
                 .WalletType {
                     display: flex;
                     justify-content: space-between;
                     .WalletPrimary {
-                        background-color: gray;
+                        background: #ffffff;
                         width: 193.68px;
                         height: 157.19px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        #WalletPrimaryTitle {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 11px;
+                            line-height: 13px;
+                            letter-spacing: 0.04em;
+                            color: #0d1118;
+                            margin-bottom: 11.7px;
+                        }
+                        #WalletPrimaryData {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 17px;
+                            line-height: 20px;
+                            letter-spacing: -0.02em;
+                            color: #0d1118;
+                            margin-bottom: 12.7px;
+                            #CoinSymbol {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 17px;
+                                line-height: 20px;
+                                letter-spacing: -0.02em;
+                                color: #777e8a;
+                                margin-left: 5px;
+                            }
+                        }
                     }
                     .WalletSecundary {
-                        background-color: green;
+                        background: #ffffff;
                         width: 192.69px;
                         height: 157.19px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        #WalletSecundaryTitle {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 11px;
+                            line-height: 13px;
+                            letter-spacing: 0.04em;
+                            color: #0d1118;
+                            margin-bottom: 11.43px;
+                        }
+                        #WalletSecundaryData {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 17px;
+                            line-height: 20px;
+                            color: #0d1118;
+                            margin-bottom: 12.65px;
+                            #CoinSymbol {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 17px;
+                                line-height: 20px;
+                                letter-spacing: -0.02em;
+                                color: #777e8a;
+                                margin-left: 5px;
+                            }
+                        }
                     }
                 }
             }
-            .CryptoComparison{
+            .CryptoComparison {
                 width: 202px;
                 height: 448px;
-                background-color: white;
                 margin-left: 40.35px;
+                ul {
+                    padding-left: 0px;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: relative;
+                    .CryptoColor {
+                        background-color: #D7F8E8;;
+                        width: 202px;
+                        height: 97px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        .CoinType {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #6b6570;
+                            margin-bottom: 9px;
+                        }
+                        .CryptoStatus {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-around;
+                            align-items: center;
+                            position: relative;
+                            img {
+                                width: 12.5px;
+                                height: 12.5px;
+                            }
+                            .CryptoValue {
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 21px;
+                                line-height: 25px;
+                                color: #151630;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
             }
         }
         .CompaniesList {
-            width: 50%;
+            // width: 50%;
+            width: 327px;
+            height: 445px;
             background-color: blue;
         }
     }

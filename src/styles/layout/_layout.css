@@ -9,6 +9,7 @@ body {
   width: auto;
   height: 990px;
   background: #f3f5fa;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -41,9 +42,10 @@ body {
 .Sidebar {
   position: absolute;
   width: 281px;
-  height: 1000px;
+  height: 990px;
   left: 0px;
   top: 0px;
+  bottom: 0;
   background: #ffffff;
   display: flex;
   flex-direction: column;
@@ -178,16 +180,23 @@ body {
   top: 52px;
   bottom: 44px;
   width: calc(100% - 420px);
+  max-width: 100%;
+  height: auto;
+  background-color: pink;
 }
 
 .Navbar {
   display: flex;
   justify-content: space-between;
   position: relative;
+  width: auto;
+  min-width: 1014px;
+  height: 99px;
 }
 
 .Welcome {
-  width: 50%;
+  min-width: 592px;
+  height: 98px;
 }
 
 .Welcome .Title {
@@ -236,7 +245,8 @@ body {
 }
 
 .SearchContainer {
-  width: 50%;
+  min-width: 325px;
+  background-color: goldenrod;
 }
 
 .SearchContainer span {
@@ -287,7 +297,9 @@ body {
 }
 
 .Overview {
+  background-color: blueviolet;
   width: 100%;
+  min-width: 1011px;
   height: 498px;
   top: 142px;
   position: absolute;
@@ -308,9 +320,8 @@ body {
 }
 
 .Overview .OverviewContainer .CoinContainer {
-  width: 50%;
-  height: 447.25px;
-  background-color: red;
+  width: 648.01px;
+  height: 448px;
   display: flex;
 }
 
@@ -318,7 +329,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: yellow;
   width: 405.66px;
 }
 
@@ -329,8 +339,95 @@ body {
   top: 0;
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation {
+  width: 158.21px;
+  height: 190.14px;
+  margin-left: 41.95px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInUSD {
+  display: flex;
+  flex-direction: column;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInUSD .TitleBalance {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  margin-bottom: 9.09px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInUSD #BalanceData {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32.96px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer .Transactions {
+  display: flex;
+  flex-direction: column;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer .Transactions .TransactionTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  margin-bottom: 12.58px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer .Transactions #TransactionDetails {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer .Wallets {
+  display: flex;
+  flex-direction: column;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer .Wallets .WalletsTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  margin-bottom: 12.58px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation .TransactionsContainer .Wallets #WalletsDetails {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .Coin .CoinInformation .BalanceInformation #LastActivity {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  margin-top: 31.51px;
 }
 
 .Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType {
@@ -339,25 +436,143 @@ body {
 }
 
 .Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletPrimary {
-  background-color: gray;
+  background: #ffffff;
   width: 193.68px;
   height: 157.19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletPrimary #WalletPrimaryTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+  color: #0d1118;
+  margin-bottom: 11.7px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletPrimary #WalletPrimaryData {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #0d1118;
+  margin-bottom: 12.7px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletPrimary #WalletPrimaryData #CoinSymbol {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #777e8a;
+  margin-left: 5px;
 }
 
 .Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletSecundary {
-  background-color: green;
+  background: #ffffff;
   width: 192.69px;
   height: 157.19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletSecundary #WalletSecundaryTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+  color: #0d1118;
+  margin-bottom: 11.43px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletSecundary #WalletSecundaryData {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: #0d1118;
+  margin-bottom: 12.65px;
+}
+
+.Overview .OverviewContainer .CoinContainer .WalletContainer .WalletType .WalletSecundary #WalletSecundaryData #CoinSymbol {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #777e8a;
+  margin-left: 5px;
 }
 
 .Overview .OverviewContainer .CoinContainer .CryptoComparison {
   width: 202px;
   height: 448px;
-  background-color: white;
   margin-left: 40.35px;
 }
 
+.Overview .OverviewContainer .CoinContainer .CryptoComparison ul {
+  padding-left: 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.Overview .OverviewContainer .CoinContainer .CryptoComparison ul .CryptoColor {
+  background-color: #D7F8E8;
+  width: 202px;
+  height: 97px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Overview .OverviewContainer .CoinContainer .CryptoComparison ul .CryptoColor .CoinType {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6b6570;
+  margin-bottom: 9px;
+}
+
+.Overview .OverviewContainer .CoinContainer .CryptoComparison ul .CryptoColor .CryptoStatus {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.Overview .OverviewContainer .CoinContainer .CryptoComparison ul .CryptoColor .CryptoStatus img {
+  width: 12.5px;
+  height: 12.5px;
+}
+
+.Overview .OverviewContainer .CoinContainer .CryptoComparison ul .CryptoColor .CryptoStatus .CryptoValue {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  color: #151630;
+  white-space: nowrap;
+}
+
 .Overview .OverviewContainer .CompaniesList {
-  width: 50%;
+  width: 327px;
+  height: 445px;
   background-color: blue;
 }
