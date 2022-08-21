@@ -60,6 +60,7 @@ body {
     top: 167px;
     padding: 0;
     margin-top: 0;
+    margin-bottom: 0;
     .ActiveList {
         font-style: normal;
         font-weight: 400;
@@ -94,7 +95,7 @@ body {
     width: 209.19px;
     height: 202.3px;
     left: 32px;
-    top: 625px;
+    top: 615px;
     display: flex;
     flex-direction: column;
     bottom: 0;
@@ -153,7 +154,7 @@ body {
     height: 64px;
     padding: 0;
     align-items: center;
-    margin-bottom: 72.7px;
+    margin-bottom: 62.7px;
     margin-top: 26.79px;
 }
 
@@ -175,13 +176,14 @@ body {
     max-width: 100%;
     height: auto;
     // min-height: 990px;
-    background-color: pink;
+    // background-color: pink;
 }
 
 // Nav
 
 .Navbar {
     display: flex;
+    // justify-content: space-between;
     justify-content: space-between;
     position: relative;
     width: auto;
@@ -237,7 +239,6 @@ body {
 .SearchContainer {
     // width: 50%;
     min-width: 325px;
-    background-color: goldenrod;
     span {
         font-weight: 500;
         font-size: 21px;
@@ -285,8 +286,7 @@ body {
 // overview
 
 .Overview {
-    // width: 100%;
-    background-color: blueviolet;
+    // background-color: blueviolet;
     width: 100%;
     min-width: 1011px;
     height: 498px;
@@ -476,6 +476,7 @@ body {
                 }
             }
             .CryptoComparison {
+                display: flex;
                 width: 202px;
                 height: 448px;
                 margin-left: 40.35px;
@@ -487,14 +488,13 @@ body {
                     justify-content: space-between;
                     position: relative;
                     .CryptoColor {
-                        background-color: #D7F8E8;;
+                        background-color: #d7f8e8;
                         width: 202px;
                         height: 97px;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        margin-bottom: 20px;
                         .CoinType {
                             font-style: normal;
                             font-weight: 400;
@@ -530,7 +530,71 @@ body {
             // width: 50%;
             width: 327px;
             height: 445px;
-            background-color: blue;
+            padding: 0;
+            ul {
+                padding: 0;
+                li:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                li {
+                    display: flex;
+                    width: auto;
+                    height: 77px;
+                    .CompaniesListOptions {
+                        background-color: #ffffff;
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 53px;
+                            height: 53px;
+                            margin-left: 18px;
+                        }
+                        .CompaniesListContainer {
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            width: 100%;
+                            margin: 0 18px;
+                            div {
+                                display: flex;
+                                justify-content: space-between;
+                                margin: 3px 0;
+                            }
+                            .CompaniesListName {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #1e253a;
+                            }
+                            .CompaniesListValue {
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 19px;
+                                letter-spacing: 0.02em;
+                                color: #f32323;
+                            }
+                            .CompaniesListType {
+                                font-size: 14px;
+                                line-height: 16px;
+                                letter-spacing: 0.02em;
+                                color: #838691;
+                            }
+                            .CompaniesListTime {
+                                font-size: 14px;
+                                line-height: 16px;
+                                text-align: right;
+                                letter-spacing: 0.02em;
+                                color: #838691;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ function DashboardContent() {
         { id: 1, title: "BTC/USD", value: "$18 928.15", url: 'https://i.ibb.co/64J75dM/arrow-up.png' },
         { id: 2, title: "ETH/USD", value: "$591.8874", url: 'https://i.ibb.co/64J75dM/arrow-up.png' },
         { id: 3, title: "XRP/USD", value: "$0.61688", url: 'https://i.ibb.co/64J75dM/arrow-up.png' },
-        { id: 9, title: "Litecoin/USD", value: "$87.9917", url: 'https://i.ibb.co/qp4XbNs/arrow-down.png' }
+        { id: 4, title: "Litecoin/USD", value: "$87.9917", url: 'https://i.ibb.co/qp4XbNs/arrow-down.png' }
     ];
 
 
@@ -36,9 +36,40 @@ function DashboardContent() {
                 <img src={CryptoInformation.url} />
             </div>
         </li>
+        
     );
     // --
-    
+
+    const Crypto = [
+        { id: 1, title: "Foodpanda", value: "-$15.85", name: "Meal", time: "10:00 PM", url: 'https://i.ibb.co/2N0dPLY/foodpanda.png' },
+        { id: 2, title: "Vodafone", value: "-$58", name: "Phone", time: "04:13 PM", url: 'https://i.ibb.co/b1hvTsY/vodafone.png' },
+        { id: 3, title: "Facebook", value: "+$7000", name: "Salary", time: "11:45 AM", url: 'https://i.ibb.co/DK0Lfj0/facebook.png' },
+        { id: 4, title: "Uber Premier", value: "-$8.75", name: "Transport", time: "8:30 AM", url: 'https://i.ibb.co/MDsTGBH/uber.png' },
+        { id: 5, title: "Citi Bank", value: "-$2,318.75", name: "Credited", time: "8:30 AM", url: 'https://i.ibb.co/f4jkwc8/citi.png' }
+        
+    ];
+
+
+
+    const Cryptolist = Crypto.map((Crypto) =>
+    <li key={Crypto.id}>
+    <div className="CompaniesListOptions">
+        <img src={Crypto.url} />
+        <div className="CompaniesListContainer">
+            <div>
+                <span className="CompaniesListName">{Crypto.title}</span>
+                <span className="CompaniesListValue">{Crypto.value}</span>
+            </div>
+            <div>
+                <span className="CompaniesListType">{Crypto.name}</span>
+                <span className="CompaniesListTime">{Crypto.time}</span>
+            </div>
+        </div>
+    </div>
+</li>
+    );
+    // --
+
 
     return (
         <div>
@@ -124,7 +155,11 @@ function DashboardContent() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="CompaniesList">5</div>
+                        <div className="CompaniesList">
+                            <ul>
+                                {Cryptolist}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
